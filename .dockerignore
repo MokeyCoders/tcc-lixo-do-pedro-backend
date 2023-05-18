@@ -1,0 +1,19 @@
+*.md
+.env*
+*.ya?ml
+
+# eslint
+.eslint*
+
+# yarn
+!.yarnrc.yml
+
+.git/
+.vscode/
+.husky/
+
+dist/
+test/
+mysql/
+node_modules/
+examples/

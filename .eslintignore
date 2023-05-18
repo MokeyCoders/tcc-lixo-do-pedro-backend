@@ -1,0 +1,13 @@
+*.d.ts
+
+.git/
+.vscode/
+.yarn/
+.husky/
+
+dist/
+test/
+mysql/
+uploads/
+node_modules/
+examples/

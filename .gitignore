@@ -1,0 +1,21 @@
+*.env*
+!.env.example
+.eslintcache
+
+*.pem
+*.pub
+
+dist/
+uploads/
+mysql/data/
+node_modules/
+examples/
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

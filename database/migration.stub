@@ -1,0 +1,32 @@
+import { Knex } from 'knex';
+
+exports.up = async (knex: Knex) => {
+  try {
+    await knex.schema.createTable('table_name', table => {
+      table.increments('id');
+
+      table.integer('column1')
+        .unsigned()
+        .notNullable()
+        .references('foreign_table_nameid');
+
+      table.bigInteger('column2')
+        .notNullable();
+
+      table.string('column3', 100)
+        .defaultTo(null);
+
+      table.timestamps(false, true);
+      table.dateTime('deleted_at')
+        .index();
+    });
+  } catch (error) {
+    console.warn(error);
+    await exports.down(knex);
+    throw error;
+  }
+};
+
+exports.down = async (knex: Knex) => {
+  await knex.schema.dropTableIfExists('table_name');
+};
